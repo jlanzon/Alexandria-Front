@@ -3,6 +3,7 @@ import axios from 'axios';
 import PdfUploader from "../components/PdfUploader";
 import Head from 'next/head';
 import Input from '@material-tailwind/react/components/Input';
+import {Headercom} from '../components/Header';
 
 export const API_URL_2 = "https://alexandria-backend.herokuapp.com/search";
 
@@ -31,8 +32,9 @@ export default function Home() {
             name="description"
             content="A simple PDF search engine built using Python, Flask, Whoosh, and Next.js"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/icon.png" />
         </Head>
+        <Headercom/ >
         <div className="relative px-4 sm:max-w-xl sm:mx-auto">
           <h1 className="text-4xl font-semibold text-center text-gray-800 mb-4">
             Project_Alexandria: Search Engine
