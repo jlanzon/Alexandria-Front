@@ -4,15 +4,19 @@ import PdfUploader from "../components/PdfUploader"
 import Head from 'next/head';
 import Input from '@material-tailwind/react/components/Input';
 
+export const API_URL_2 = "https://alexandria-backend.herokuapp.com/search";
+
 export default function Home() {
   const [file, setFile] = useState(null);
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
+  
+
   const handleSearch = async () => {
     if (!query) return;
     try {
-      const response = await axios.get('http://localhost:5000/search', { params: { query } });
+      const response = await axios.get( API_URL_2, { params: { query } });
       setSearchResults(response.data);
       console.log(response.data)
     } catch (error) {

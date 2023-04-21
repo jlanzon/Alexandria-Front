@@ -1,13 +1,14 @@
 // components/PdfUploader.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { API_URL } from '../pages/api/upload';
+import { API_URL_2 } from '../pages/api/upload';
 import LoadingProgressBar from './LoadingProgressBar';
 import Progress from '@material-tailwind/react/components/Progress';
 import Button from '@material-tailwind/react/components/Button';
 import {
   CloudArrowUpIcon,
 } from "@heroicons/react/24/outline";
+
 
 
 const PdfUploader = () => {
@@ -31,7 +32,7 @@ const PdfUploader = () => {
       const formData = new FormData();
       formData.append("file", file);
 
-      const response = await axios.post(API_URL + "/upload", formData, {
+      const response = await axios.post(API_URL_2 + "/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
